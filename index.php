@@ -175,50 +175,67 @@ extract($_GET);
         </div>
       </div>
 
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <h5>Riesgo de progresión a insuficiencia renal que requiera diálisis o transplante:</h5>
-        </div>
-      </div>
-
-      <div class="row mt-3">
-        <div class="col-md-4 offset-md-2">
-          <div class="info-box shadow">
-            <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-number"><span id="kfre2"></span>%</span>
-              <span class="info-box-text">en 2 años</span>
-            </div>
+      <div id="main_res">
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <h5>Riesgo de progresión a insuficiencia renal que requiera diálisis o transplante:</h5>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="info-box shadow">
-            <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
+        <div class="row mt-3">
+          <div class="col-md-4 offset-md-2">
+            <div class="info-box shadow">
+              <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
 
-            <div class="info-box-content">
-              <span class="info-box-number"><span id="kfre5"></span>%</span>
-              <span class="info-box-text">en 5 años</span>
+              <div class="info-box-content">
+                <span class="info-box-number"><span id="kfre2"></span>%</span>
+                <span class="info-box-text">en 2 años</span>
+              </div>
             </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="info-box shadow">
+              <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-number"><span id="kfre5"></span>%</span>
+                <span class="info-box-text">en 5 años</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <small class="text-info has-tooltip text-ref" id="kfre_ref">KFRE (Kidney failure risk ecuation) [4]</small>
           </div>
         </div>
 
-        <div class="col-12 text-center">
-          <small class="text-info has-tooltip text-ref" id="kfre_ref">KFRE (Kidney failure risk ecuation) [4]</small>
+        <div class="row mt-3">
+          <div class="col-md-8 offset-md-2">
+            <ul class="mt-4">
+              <li><strong>Un riesgo en 5 años entre 3 y 5 %</strong> sugiere una derivación a un médico nefrólogo.</li>
+              <li>
+                <strong>Un riesgo de insuficiencia renal en 2 años mayor al 10 %</strong> sugiere que es momento de recibir una atención de salud interdisciplinaria (médico nefrólogo, enfermera/o, nutricionista, entre otros).
+              </li>
+              <li>
+                <strong>Un riesgo estimado en 2 años con valores entre 20 y 40 %</strong> puede determinar que es tiempo de prepararse para un posible trasplante renal.
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 text-center">
+            <small class="text-info has-tooltip text-ref" id="ranks_ref">Rangos de referencia nefrológica [5]</small>
+          </div>
         </div>
       </div>
 
-      <div class="row mt-3">
-        <div class="col-md-8 offset-md-2">
-          <ul class="mt-4">
-            <li><strong>Un riesgo en 5 años entre 3 y 5 %</strong> sugiere una derivación a un médico nefrólogo.</li>
-            <li><strong>Un riesgo de insuficiencia renal en 2 años mayor al 10 %</strong> sugiere que es momento de recibir una atención de salud interdisciplinaria (médico nefrólogo, enfermera/o, nutricionista, entre otros).</li>
-            <li><strong>Un riesgo estimado en 2 años con valores entre 20 y 40 %</strong> puede determinar que es tiempo de prepararse para un posible trasplante renal.</li>
-          </ul>
-        </div>
-        <div class="col-12 text-center">
-          <small class="text-info has-tooltip text-ref" id="ranks_ref">Rangos de referencia nefrológica [5]</small>
+      <div id="sec_res">
+        <div class="row mt-5">
+          <div class="col-md-8 offset-md-2">
+            <div class="alert alert-warning">
+              <h5><i class="icon fas fa-info"></i> Advertencia</h5>
+              <span class="text"></span>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -55,7 +55,15 @@ function get_text($i): array
 if (extract($_POST)):
   try {
     if ($age < 1 || $age > 120) {
-      throw new Exception('La edad debe estar entre 1 y 120 años.');
+      throw new Exception('La edad debe estar entre <strong>1 y 120 años</strong>.');
+    }
+
+    if ($creatin < 0.9 && $meas == 'umol') {
+      throw new Exception('La creatinina no puede ser menor a<br><strong>0.8 μmol/l</strong>.');
+    }
+
+    if ($creatin < 0.01 && $meas == 'mgdl') {
+      throw new Exception('La creatinina no puede ser menor a<br><strong>0.01 mg/dL</strong>.');
     }
 
     if ($meas == 'umol')

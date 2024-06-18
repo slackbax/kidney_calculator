@@ -7,10 +7,10 @@ $(document).ready(function () {
     $(this).val(val.replace(/[^\d.]+/g, ''))
   })
 
-  $('.text-ref').click(function() {
+  $('.text-ref').click(function () {
     const id = $(this).attr('id').split('_').shift()
     let count = 0
-    $('html, body').animate({ scrollTop: $(document).height() }, 1000);
+    $('html, body').animate({scrollTop: $(document).height()}, 1000);
     let flashInterval = setInterval(function () {
       $('#' + id + '_link').toggleClass('border-orange')
       count++
@@ -60,8 +60,20 @@ $(document).ready(function () {
           $('#efg_stage_ckd').html('Etapa ' + r.stage_ckd)
           $('#result_text h5').html(r.text.title)
           $('#result_text span').html(r.text.desc)
-          $('#kfre2').html(r.twoyr)
-          $('#kfre5').html(r.fiveyr)
+          if (parseFloat(r.ckd) < 10) {
+            $('#main_res').css('display', 'none')
+            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>menor a 10 mL / min / 1.73 m<sup>2</sup></strong>, por lo que no han sido calculados.')
+            $('#sec_res').css('display', 'block')
+          } else if (parseFloat(r.ckd) > 60) {
+            $('#main_res').css('display', 'none')
+            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>mayor a 60 mL / min / 1.73 m<sup>2</sup></strong>, por lo que no han sido calculados.')
+            $('#sec_res').css('display', 'block')
+          } else {
+            $('#main_res').css('display', 'block')
+            $('#sec_res').css('display', 'none')
+            $('#kfre2').html(r.twoyr)
+            $('#kfre5').html(r.fiveyr)
+          }
           $res_div.css('display', 'block')
           $('html, body').animate({
             scrollTop: $("#div_results").offset().top
@@ -70,8 +82,8 @@ $(document).ready(function () {
           $res_div.css('display', 'none')
           Swal.fire({
             icon: 'error',
-            title: '<strong>¡Error!</strong>',
-            text: r.msg,
+            title: '¡Error!',
+            html: r.msg,
             confirmButtonText: 'Aceptar',
             confirmButtonColor: '#3498db',
           })

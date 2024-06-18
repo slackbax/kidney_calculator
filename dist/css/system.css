@@ -75,7 +75,7 @@ label .fad {
 }
 
 .has-tooltip {
-  border-bottom: 1px dashed #30aba3 !important;
+  border-bottom: 1px dashed !important;
   cursor: help;
 }
 
