@@ -187,7 +187,7 @@ extract($_GET);
             <div class="info-box shadow">
               <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
 
-              <div class="info-box-content">
+              <div class="info-box-content text-center">
                 <span class="info-box-number"><span id="kfre2"></span>%</span>
                 <span class="info-box-text">en 2 años</span>
               </div>
@@ -198,7 +198,7 @@ extract($_GET);
             <div class="info-box shadow">
               <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
 
-              <div class="info-box-content">
+              <div class="info-box-content text-center">
                 <span class="info-box-number"><span id="kfre5"></span>%</span>
                 <span class="info-box-text">en 5 años</span>
               </div>
