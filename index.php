@@ -135,10 +135,10 @@ extract($_GET);
 
       <div class="row mt-4">
         <div class="col-md-5 offset-md-1 text-center">
-          <span class="title-mini">Etapa</span>
+          <span class="title-mini">ETAPA</span>
         </div>
         <div class="col-md-6 text-center">
-          <span class="title-mini">Egfr</span>
+          <span class="title-mini">eGFR</span>
         </div>
       </div>
 

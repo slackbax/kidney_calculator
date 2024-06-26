@@ -100,9 +100,13 @@ if (extract($_POST)):
     $rn = ($afro == 'S') ? 1.212 : 1;
     $mdr = round(175 * pow($creatin, -1.154) * pow($age, -0.203) * $mdr_s * $rn, 1);
 
-    $term = (-0.2201 * ($age / 10 - 7.036)) + (0.2467 * ($sx - 0.5642)) - (0.5567 * ($ckd_raw / 5 - 7.222)) + (0.4510 * (log($creat_album) - 5.137));
-    $tyr = round(100 * (1 - pow(0.9832, exp($term))), 2);
-    $fyr = round(100 * (1 - pow(0.9365, exp($term))), 2);
+    $tyr = '';
+    $fyr = '';
+    if (!empty($creat_album)) {
+      $term = (-0.2201 * ($age / 10 - 7.036)) + (0.2467 * ($sx - 0.5642)) - (0.5567 * ($ckd_raw / 5 - 7.222)) + (0.4510 * (log($creat_album) - 5.137));
+      $tyr = round(100 * (1 - pow(0.9832, exp($term))), 2);
+      $fyr = round(100 * (1 - pow(0.9365, exp($term))), 2);
+    }
 
     $response = [
       'status' => true,

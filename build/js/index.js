@@ -69,10 +69,16 @@ $(document).ready(function () {
             $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>mayor a 60 mL / min / 1.73 m<sup>2</sup></strong>, por lo que no han sido calculados.')
             $('#sec_res').css('display', 'block')
           } else {
-            $('#main_res').css('display', 'block')
-            $('#sec_res').css('display', 'none')
-            $('#kfre2').html(r.twoyr)
-            $('#kfre5').html(r.fiveyr)
+            if (r.twoyr !== '') {
+              $('#main_res').css('display', 'block')
+              $('#sec_res').css('display', 'none')
+              $('#kfre2').html(r.twoyr)
+              $('#kfre5').html(r.fiveyr)
+            } else {
+              $('#main_res').css('display', 'none')
+              $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no pueden ser calculados sin haber ingresado el <strong>Ratio Albúmina/Creatinina en Orina</strong>.')
+              $('#sec_res').css('display', 'block')
+            }
           }
           $res_div.css('display', 'block')
           $('html, body').animate({
