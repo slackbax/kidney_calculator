@@ -175,6 +175,17 @@ extract($_GET);
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+          <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseRecommendations" aria-expanded="false"><i class="fa fa-plus mr-2"></i>Ver recomendaciones</button>
+        </div>
+        <div class="col-md-10 offset-md-1 mt-3">
+          <div id="collapseRecommendations" class="collapse">
+            <div class="card card-body"></div>
+          </div>
+        </div>
+      </div>
+
       <div id="main_res">
         <div class="row mt-5">
           <div class="col-12 text-center">

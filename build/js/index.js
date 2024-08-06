@@ -60,6 +60,7 @@ $(document).ready(function () {
           $('#efg_stage_ckd').html('Etapa ' + r.stage_ckd)
           $('#result_text h5').html(r.text.title)
           $('#result_text span').html(r.text.desc)
+          $('#collapseRecommendations .card-body').html(r.text.rec)
           if (parseFloat(r.ckd) < 10) {
             $('#main_res').css('display', 'none')
             $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>menor a 10 mL / min / 1.73 m<sup>2</sup></strong>, por lo que no han sido calculados.')

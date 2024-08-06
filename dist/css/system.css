@@ -107,6 +107,11 @@ label .fad {
   border-radius: 8px;
 }
 
+.btn-primary {
+  background-color: #215587;
+  border-radius: 8px;
+}
+
 #div_results {
   margin-bottom: 20px;
 }
@@ -174,6 +179,37 @@ label .fad {
   padding: 0 5px;
   font-size: 12px;
   font-style: italic;
+}
+
+#collapseRecommendations .card {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 3px solid #30aba3;
+  border-radius: 12px;
+}
+
+#collapseRecommendations ul li {
+  color: #1a4169;
+}
+
+ol {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+ol li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+ol li i {
+  width: 18px;
+  opacity: 0.8;
+  color: gray;
+}
+
+ol li ul li {
+  list-style: circle;
 }
 
 /*# sourceMappingURL=system.css.map */
