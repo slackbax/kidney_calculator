@@ -31,7 +31,7 @@ extract($_GET);
     <div class="wrapper mt-4">
       <div class="row">
         <div class="alert mt-4">
-          <h3>Calculadora ERC</h3>
+          <h3>Calculadora de Función Renal</h3>
         </div>
       </div>
     </div>
