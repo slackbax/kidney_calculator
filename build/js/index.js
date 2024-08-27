@@ -63,11 +63,11 @@ $(document).ready(function () {
           $('#collapseRecommendations .card-body').html(r.text.rec)
           if (parseFloat(r.ckd) < 10) {
             $('#main_res').css('display', 'none')
-            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>menor a 10 mL / min / 1.73 m<sup>2</sup></strong>, por lo que no han sido calculados.')
+            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>menor a 10 mL / min / 1.73 m<sup>2</sup></strong> (etapas 3 a 5), por lo que no han sido calculados.')
             $('#sec_res').css('display', 'block')
           } else if (parseFloat(r.ckd) > 60) {
             $('#main_res').css('display', 'none')
-            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>mayor a 60 mL / min / 1.73 m<sup>2</sup></strong>, por lo que no han sido calculados.')
+            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>mayor a 60 mL / min / 1.73 m<sup>2</sup></strong> (etapas 3 a 5), por lo que no han sido calculados.')
             $('#sec_res').css('display', 'block')
           } else {
             if (r.twoyr !== '') {

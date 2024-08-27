@@ -31,7 +31,7 @@ extract($_GET);
     <div class="wrapper mt-4">
       <div class="row">
         <div class="alert mt-4">
-          <h3>Calculadora de Función Renal</h3>
+          <h3>¿Cómo están mis riñones?</h3>
         </div>
       </div>
     </div>
@@ -188,12 +188,23 @@ extract($_GET);
 
       <div id="main_res">
         <div class="row mt-5">
-          <div class="col-12 text-center">
-            <h5>Riesgo de progresión a insuficiencia renal que requiera diálisis o transplante:</h5>
+          <div class="col-10 offset-md-1 text-center">
+            <h4>KFRE: Ecuación de predicción de Riesgo Progresión a insuficiencia renal</h4>
+            <p>La mayoría de las ecuaciones validadas se basan en datos de fácil acceso y por lo tanto, podrían implementarse
+              igualmente en entornos de bajos recursos. Se recomienda promover su incorporación a registros médicos electrónicos,
+              sistemas de información de laboratorio o aplicaciones móviles. La evidencia es lo suficientemente fuerte como para
+              ser una recomendación generalizada.
+            </p>
           </div>
         </div>
 
-        <div class="row mt-3">
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <h5 class="text-bold">Riesgo de progresión a insuficiencia renal que requiera diálisis o transplante</h5>
+          </div>
+        </div>
+
+        <div class="row mt-4">
           <div class="col-md-4 offset-md-2">
             <div class="info-box shadow">
               <span class="info-box-icon bg-info"><i class="fad fa-kidneys"></i></span>
@@ -277,12 +288,12 @@ extract($_GET);
               [3] "Your Kidneys, Your Health: A guidebook designed for individuals diagnosed with late stage chronic kidney disease". https://kidneyfailurerisk.com
             </span>
           </a>
-          <a class="btn btn-light btn-biblio" id="kfre_link" href="https://jamanetwork.com/journals/jama/article-abstract/2481005" target="_blank">
+          <a class="btn btn-light btn-biblio" id="kfre_link" href="https://doi.org/10.1016/j.kint.2023.10.018" target="_blank">
             <span class="btn-icon">
               <i class="fad fa-books"></i>
             </span>
             <span class="btn-text">
-              [4] Tangri N, Grams ME, Levey AS, et al. "Multinational Assessment of Accuracy of Equations for Predicting Risk of Kidney Failure: A Meta-analysis". JAMA. 2016;315(2):164–174. doi:10.1001/jama.2015.18202
+              [4] "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group (2024)". KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney international, 105(4S), S117–S314.
             </span>
           </a>
           <a class="btn btn-light btn-biblio" id="ranks_link" href="https://kidneyfailurerisk.com/interpretation" target="_blank">
