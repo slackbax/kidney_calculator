@@ -240,7 +240,7 @@ extract($_GET);
                 <strong>Un riesgo de insuficiencia renal en 2 años mayor al 10 %</strong> sugiere que es momento de recibir una atención de salud interdisciplinaria (médico nefrólogo, enfermera/o, nutricionista, entre otros).
               </li>
               <li>
-                <strong>Un riesgo estimado en 2 años con valores entre 20 y 40 %</strong> puede determinar que es tiempo de prepararse para un posible trasplante renal.
+                <strong>Un riesgo estimado en 2 años con valores entre 20 y 40 %</strong> puede determinar que es tiempo de prepararse para un posible trasplante renal o diálisis.
               </li>
             </ul>
           </div>
@@ -258,6 +258,12 @@ extract($_GET);
               <span class="text"></span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-10 offset-md-1 text-center">
+          ¿Quieres más información? Revisa <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro recetario saludable aquí</a>.
         </div>
       </div>
 
