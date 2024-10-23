@@ -28,9 +28,8 @@ function get_text($i): array
   if ($i >= 90)
     return [
       'title' => 'Etapa 1',
-      'desc' => 'La gran mayoría de las personas con enfermedad renal crónica (ERC) en etapas 1 y 2, vive con normalidad y no presenta síntomas o signos, 
-      pudiendo avanzar a etapas más avanzadas en forma silenciosa. Por tanto es importante los chequeos médicos y exámenes para detectar y controlar 
-      oportunamente alguna complicación. [3]<br><br>
+      'desc' => 'La mayoría de las personas con ERC en etapas 1 y 2 no presenta síntomas y puede vivir con normalidad. Sin embargo, la enfermedad puede 
+      retrasar la evolución de la persona, por lo que es importante avanzar sin que lo notes, por lo que es importante realizar chequeos médicos regulares. <small class="has-tooltip text-ref" id="kidney_ref">[3]</small><br><br>
       <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
@@ -49,9 +48,8 @@ function get_text($i): array
   else if ($i >= 60)
     return [
       'title' => 'Etapa 2',
-      'desc' => 'La gran mayoría de las personas con enfermedad renal crónica (ERC) en etapas 1 y 2, vive con normalidad y no presenta síntomas o signos, 
-      pudiendo avanzar a etapas más avanzadas en forma silenciosa. Por tanto es importante los chequeos médicos y exámenes para detectar y controlar 
-      oportunamente alguna complicación. [3]',
+      'desc' => 'La mayoría de las personas con ERC en etapas 1 y 2 no presenta síntomas y puede vivir con normalidad. Sin embargo, la enfermedad puede 
+      avanzar sin que lo notes, por lo que es importante realizar chequeos médicos regulares. <small class="has-tooltip text-ref" id="kidney_ref">[3]</small>',
       'rec' => '<ol>
       <li><i class="fad fa-user-md mr-2"></i><strong>Consulta médica periódica.</strong> Lo que permitirá realizar eventuales ajustes de forma oportuna en el tratamiento.</li>
       <li><i class="fad fa-capsules mr-2"></i><strong>Medicamentos.</strong> Consulta a tu médico antes de usar cualquier medicamento nuevo, suplemento, vitamina o productos naturales.</li> 
@@ -69,10 +67,9 @@ function get_text($i): array
     return [
       'title' => 'Etapa 3',
       'desc' => 'Las personas con enfermedad renal crónica (ERC) en etapas 3 y 4 pueden presentar síntomas o signos progresivamente por disminución de 
-      la función renal. Los más frecuentes son el aumento de la presión arterial, edema (hinchazón) en las piernas, dolores musculares y articulares, 
-      falta de ánimo, disminución del apetito y cambios del gusto, náuseas y vómitos, y aumento de la orina (especialmente nocturna).<br><br>
-      En estas etapas es muy importante el control médico regular, así como la realización de los exámenes correspondientes para detener o enlentecer 
-      la progresión y detectar complicaciones oportunamente. [3]<br><br>
+      la función renal. Los más frecuentes son el aumento de la presión arterial, edema (hinchazón) en las piernas, dolores musculares y articulares, falta
+      de ánimo, disminución del apetito y cambios del gusto, náuseas y vómitos, y aumento de la cantidad de orina (especialmente nocturna).<br>
+      En estas etapas, es crucial realizar controles médicos y exámenes regulares para retrasar el avance de la enfermedad y detectar complicaciones a tiempo. <small class="has-tooltip text-ref" id="kidney_ref">[3]</small><br><br>
       <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
@@ -100,10 +97,9 @@ function get_text($i): array
     return [
       'title' => 'Etapa 4',
       'desc' => 'Las personas con enfermedad renal crónica (ERC) en etapas 3 y 4 pueden presentar síntomas o signos progresivamente por disminución de 
-      la función renal. Los más frecuentes son el aumento de la presión arterial, edema (hinchazón) en las piernas, dolores musculares y articulares, 
-      falta de ánimo, disminución del apetito y cambios del gusto, náuseas y vómitos, y aumento de la orina (especialmente nocturna).<br><br>
-      En estas etapas es muy importante el control médico regular, así como la realización de los exámenes correspondientes para detener o enlentecer 
-      la progresión y detectar complicaciones oportunamente. [3]<br><br>
+      la función renal. Los más frecuentes son el aumento de la presión arterial, edema (hinchazón) en las piernas, dolores musculares y articulares, falta
+      de ánimo, disminución del apetito y cambios del gusto, náuseas y vómitos, y aumento de la cantidad de orina (especialmente nocturna).<br>
+      En estas etapas, es crucial realizar controles médicos y exámenes regulares para retrasar el avance de la enfermedad y detectar complicaciones a tiempo. <small class="has-tooltip text-ref" id="kidney_ref">[3]</small><br><br>
       <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
@@ -130,16 +126,17 @@ function get_text($i): array
   else
     return [
       'title' => 'Etapa 5',
-      'desc' => 'En la etapa 5 de la ERC, la función del riñón está disminuida y es insuficiente para satisfacer las necesidades vitales del medio interno 
-      y la eliminación de toxinas del organismo. Las personas pueden presentar exacerbación de los síntomas o signos ya descritos en las recomendaciones de las etapas 3 y 4.<br><br>
-      En conjunto con la familia y su equipo médico deberá optar por alguna de las siguientes opciones:
+      'desc' => 'En la etapa 5 de la ERC, la función del riñón está disminuida y es insuficiente para satisfacer las necesidades vitales del medio interno y la 
+      eliminación de toxinas del organismo. Los síntomas mencionados en las etapas 3 / 4 pueden empeorar y requerir atención médica de urgencia.<br><br>
+      En esta etapa, la persona con ERC en conjunto con la familia y su equipo médico deberá decidir por alguna de las siguientes opciones:
       <ul>
         <li>Diálisis en alguna de las 2 modalidades hemo y peritoneodiálisis</li>
-        <li>Trasplante renal, tratamiento conservador (que no considera la diálisis). Pide a tu equipo tratante mayor información.</li>
+        <li>Trasplante renal</li>
+        <li>Tratamiento conservador (que no considera la diálisis). Pide a tu equipo tratante mayor información.</li>
       </ul>
       La diálisis (hemo o peritoneodiálisis) y el trasplante renal son prestaciones de la patología GES (FONASA) Insuficiencia Renal Crónica Terminal, 
       las cuales son de acceso universal para todos los pacientes en nuestro país, independiente de la edad y condición socioeconómica. Además son sujetos 
-      de garantía de protección financiera. [3]<br><br>
+      de garantía de protección financiera. <small class="has-tooltip text-ref" id="kidney_ref">[3]</small><br><br>
       <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>

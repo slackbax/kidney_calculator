@@ -42,13 +42,17 @@ extract($_GET);
       <div class="alert mt-4">
         <h5 class="font-weight-bold mb-3">¿Qué necesitas para calcular tu función renal?</h5>
         <p>
-          El análisis de creatinina es una forma de medir el funcionamiento de los riñones al momento de filtrar los
-          desechos de la sangre.
+          La función renal se puede estimar con ecuaciones matemáticas (MDRD-4 y CKD- EPI), que utilizan datos como edad, sexo y el nivel de creatinina en sangre para
+          aproximar la real capacidad de filtrar los desechos de la sangre.
+        </p>
+        <p class="text-bold">
+          ¿Es posible estimar el riesgo de progresar la enfermedad e ingresar a diálisis?
         </p>
         <p>
-          La medición de creatinina es parte de las mediciones de un perfil bioquímico donde, mediante una muestra
-          sanguínea, se miden diversos parámetros. Esto se puede solicitar por orden del médico tratante,
-          voluntariamente en un chequeo general, o por un control crónico.
+          Si además cuenta además con el examen de orina Razón Albuminuria/Creatininuria (RAC o microalbuminuria), se puede adicionalmente estimar el riesgo de que una
+          persona con enfermedad renal crónica (ERC) necesite diálisis o trasplante renal en los próximos 2 o 5 años ( Ecuación de Riesgo de Insuficiencia Renal. KFRE).
+          Si desea conocer la función estimada de sus riñones y/o el riesgo de progresión KFRE, ingrese los datos en el siguiente formulario y se recomienda siempre
+          informar el resultado a su médico tratante para decidir el plan de tratamiento.
         </p>
       </div>
 
@@ -103,7 +107,7 @@ extract($_GET);
               </div>
 
               <div class="col-md-4">
-                <label for="creat_album"><i class="fad fa-glass-whiskey-rocks mr-2"></i><span class="has-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Medida en mg/g">Ratio Albúmina/Creatinina en Orina</span></label>
+                <label for="creat_album"><i class="fad fa-glass-whiskey-rocks mr-2"></i><span class="has-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Necesaria para el cálculo de KFRE">Ratio Albúmina/Creatinina en Orina</span></label>
                 <div class="input-group">
                   <input type="text" name="creat_album" id="creat_album" class="form-control text-right number" autocomplete="off">
                   <div class="input-group-append">
@@ -177,7 +181,9 @@ extract($_GET);
 
       <div class="row">
         <div class="col-md-6 offset-md-3 mt-3">
-          <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseRecommendations" aria-expanded="false"><i class="fa fa-plus mr-2"></i>Ver recomendaciones</button>
+          <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseRecommendations" aria-expanded="false">
+            <i class="fa fa-plus mr-2"></i>Ver recomendaciones
+          </button>
         </div>
         <div class="col-md-10 offset-md-1 mt-3">
           <div id="collapseRecommendations" class="collapse">
@@ -190,10 +196,21 @@ extract($_GET);
         <div class="row mt-5">
           <div class="col-10 offset-md-1 text-center">
             <h4>KFRE: Ecuación de predicción de Riesgo Progresión a insuficiencia renal</h4>
-            <p>La mayoría de las ecuaciones validadas se basan en datos de fácil acceso y por lo tanto, podrían implementarse
-              igualmente en entornos de bajos recursos. Se recomienda promover su incorporación a registros médicos electrónicos,
-              sistemas de información de laboratorio o aplicaciones móviles. La evidencia es lo suficientemente fuerte como para
-              ser una recomendación generalizada.
+          </div>
+          <div class="col-10 offset-md-1">
+            <p>La Ecuación de Riesgo de Insuficiencia Renal (KFRE) es una herramienta que ayuda a
+              predecir el riesgo de que una persona con enfermedad renal crónica (ERC) pudiera
+              necesitar diálisis o trasplante renal en los próximos 2 o 5 años.
+              Para calcular el KFRE, se necesita la siguiente información:</p>
+            <ul>
+              <li class="text-default">Edad y sexo de la persona.</li>
+              <li class="text-default">Exámenes de laboratorio: la Velocidad de Filtración Glomerular estimada (VFGe) y
+                la Razón Albuminuria/Creatininuria.
+              </li>
+            </ul>
+            <p>Estos datos se pueden obtener en cualquier consultorio de la red de salud.
+              El KFRE permite a los médicos y al paciente junto a su familia tomar decisiones
+              importantes sobre el tratamiento de la enfermedad renal.
             </p>
           </div>
         </div>
@@ -235,17 +252,31 @@ extract($_GET);
         <div class="row mt-3">
           <div class="col-md-8 offset-md-2">
             <ul class="mt-4">
-              <li><strong>Un riesgo en 5 años entre 3 y 5 %</strong> sugiere una derivación a un médico nefrólogo.</li>
               <li>
-                <strong>Un riesgo de insuficiencia renal en 2 años mayor al 10 %</strong> sugiere que es momento de recibir una atención de salud interdisciplinaria (médico nefrólogo, enfermera/o, nutricionista, entre otros).
+                <strong>KFRE mayor o igual a 3% - 5% en 5 años</strong> es necesario derivar a un nefrólogo (especialista en riñones).
               </li>
               <li>
-                <strong>Un riesgo estimado en 2 años con valores entre 20 y 40 %</strong> puede determinar que es tiempo de prepararse para un posible trasplante renal o diálisis.
+                <strong>KFRE mayor a 10% en 2 años</strong> debe ser derivado a un equipo multidisciplinario en la Unidad de Cuidado Renal Avanzado (UCRA).
+              </li>
+              <li>
+                <strong>Un valor de KFRE mayor a 40% en 2 años o VFGe menor de 15 mL/min</strong> determina que el paciente debe recibir educación y preparación para trasplante o diálisis.
               </li>
             </ul>
           </div>
           <div class="col-12 text-center">
             <small class="text-info has-tooltip text-ref" id="ranks_ref">Rangos de referencia nefrológica [5]</small>
+          </div>
+          <div class="col-10 offset-md-1 mt-3">
+            <p class="text-bold">Importante</p>
+            <ul>
+              <li class="text-default">El KFRE es una herramienta adicional para tomar decisiones informadas sobre la
+                oportunidad y el mejor tratamiento para tu enfermedad renal crónica.
+              </li>
+              <li class="text-default">
+                <strong>Siempre</strong> comparte el resultado de esta ecuación con tu médico para planificar el
+                tratamiento adecuado.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -261,9 +292,346 @@ extract($_GET);
         </div>
       </div>
 
-      <div class="row mt-5">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3">
+          <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTreatments" aria-expanded="false">
+            <i class="fa fa-plus mr-2"></i>Ver opciones de tratamiento
+          </button>
+        </div>
+        <div class="col-md-10 offset-md-1 mt-4">
+          <div id="collapseTreatments" class="collapse">
+            <h5>Opciones de tratamiento en la Enfermedad Renal Avanzada</h5>
+            <p>Cuando los riñones ya no funcionan adecuadamente, es necesario conocer todas las
+              opciones de tratamiento disponibles.</p>
+            <div class="card card-outline card-tabs">
+              <div class="card-header p-0 pt-1 border-bottom-0">
+                <ul class="nav nav-tabs" id="treatments-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="treatments-hemo-tab" data-toggle="pill" href="#treatments-hemo" role="tab" aria-controls="treatments-hemo" aria-selected="true">Hemodiálisis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="treatments-dialisis-tab" data-toggle="pill" href="#treatments-dialisis" role="tab" aria-controls="treatments-dialisis" aria-selected="false">Diálisis Peritoneal</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="treatments-transplant-tab" data-toggle="pill" href="#treatments-transplant" role="tab" aria-controls="treatments-transplant" aria-selected="false">Trasplante Renal</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="treatments-conservative-tab" data-toggle="pill" href="#treatments-conservative" role="tab" aria-controls="treatments-conservative" aria-selected="false">Tratamiento Conservador</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content" id="treatments-tabContent">
+                  <div class="tab-pane fade show active" id="treatments-hemo" role="tabpanel" aria-labelledby="treatments-hemo-tab">
+                    <p class="text-center mb-4">
+                      <img alt="Hemodiálisis" src="dist/img/hemodialisis.jpg" style="width:50%">
+                    </p>
+                    <strong>¿En qué consiste y cómo funciona?</strong><br>
+                    La hemodiálisis es un tratamiento que utiliza una máquina para limpiar y filtrar la sangre cuando los riñones ya no pueden hacerlo.
+                    La sangre se extrae del cuerpo a través de una aguja insertada en una vena y se pasa por un filtro especial llamado dializador o "riñón
+                    artificial". Este filtro elimina las toxinas, los desechos y el exceso de líquidos. La sangre limpia se devuelve al cuerpo por otra vía.<br><br>
+                    <strong>¿Dónde se realiza?</strong><br>
+                    Generalmente, la hemodiálisis se realiza en centros especializados de diálisis. Los pacientes suelen asistir tres veces por semana, y
+                    cada sesión dura entre 3 y 5 horas. En estos centros, un equipo de profesionales de la salud, incluyendo nefrólogos y enfermeras
+                    especializadas, supervisa el tratamiento y monitorea la salud del paciente.<br><br>
+                    <strong>Acceso vascular para la hemodiálisis</strong><br>
+                    Para permitir el flujo constante de sangre hacia y desde la máquina de diálisis, se requiere un acceso vascular. La opción preferida es
+                    una fístula arteriovenosa, creada quirúrgicamente en el brazo. Si no es posible, se puede utilizar un catéter temporal
+                    insertado en una vena grande del cuello.<br><br>
+                    <strong>Ventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Eliminación eficiente de toxinas y líquidos:</strong> La hemodiálisis es eficaz para limpiar la
+                        sangre rápidamente.
+                      </li>
+                      <li class="text-default">
+                        <strong>Supervisión médica constante:</strong> Los profesionales de la salud están presentes
+                        durante cada sesión.
+                      </li>
+                      <li class="text-default">
+                        <strong>No requiere equipo en casa:</strong> Todo el equipo necesario está en el centro de diálisis.
+                      </li>
+                      <li class="text-default">
+                        <strong>Menor pérdida de proteínas:</strong> Comparado con la diálisis peritoneal, la hemodiálisis
+                        pierde menos proteínas.
+                      </li>
+                      <li class="text-default">
+                        <strong>Amplia disponibilidad:</strong> Disponible en centros de diálisis en todo país y en
+                        el mundo.
+                      </li>
+                    </ul>
+                    <strong>Desventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Desplazamientos frecuentes al centro de diálisis:</strong> Requiere viajes regulares que
+                        pueden ser agotadores.
+                      </li>
+                      <li class="text-default">
+                        <strong>Horarios rígidos:</strong> Las sesiones programadas pueden interferir con actividades
+                        personales.
+                      </li>
+                      <li class="text-default">
+                        <strong>Efectos secundarios:</strong> Posibles cambios bruscos en la presión arterial, calambres y
+                        fatiga.
+                      </li>
+                      <li class="text-default">
+                        <strong>Acceso vascular:</strong> La necesidad de una fístula o catéter implica procedimientos
+                        quirúrgicos y posibles complicaciones.
+                      </li>
+                      <li class="text-default">
+                        <strong>Variabilidad de la presión arterial:</strong> Puede provocar hipotensión (Pº baja) y
+                        arritmias cardíacas durante el tratamiento.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="treatments-dialisis" role="tabpanel" aria-labelledby="treatments-dialisis-tab">
+                    <p class="text-center mb-4">
+                      <img alt="Diálisis peritoneal" src="dist/img/dialisis_peri.jpg" style="width:50%">
+                    </p>
+                    <strong>¿En qué consiste y cómo funciona?</strong><br>
+                    La diálisis peritoneal es un tratamiento que utiliza el revestimiento interno del abdomen, llamado peritoneo, como filtro natural para
+                    eliminar toxinas y exceso de líquidos. Se inserta un catéter permanente en el abdomen a través del cual se introduce un líquido de
+                    diálisis estéril. Las toxinas y desechos pasan desde la sangre al líquido de diálisis a través del peritoneo. Después de varias horas,
+                    el líquido ahora saturado con toxinas y deshechos se drena y reemplaza por líquido de diálisis.<br><br>
+                    <strong>¿Dónde se realiza?</strong><br>
+                    Este tratamiento se realiza principalmente en el hogar, lo que ofrece mayor flexibilidad y
+                    autonomía. Existen dos modalidades principales:
+                    <ul>
+                      <li class="text-default">
+                        <strong>Diálisis Peritoneal Continua Ambulatoria (DPCA):</strong> El paciente realiza manualmente
+                        los intercambios de líquido varias veces al día.
+                      </li>
+                      <li class="text-default">
+                        <strong>Diálisis Peritoneal Automatizada (DPA):</strong> Una máquina llamada cicladora
+                        automatiza los intercambios durante la noche mientras el paciente duerme.
+                      </li>
+                    </ul>
+                    <strong>Requisitos para la diálisis peritoneal</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Entrenamiento:</strong> El paciente y/o su cuidador deben recibir capacitación para
+                        realizar el procedimiento correctamente.
+                      </li>
+                      <li class="text-default">
+                        <strong>Espacio adecuado en casa:</strong> Se necesita un área limpia y segura para almacenar
+                        suministros y realizar los intercambios.
+                      </li>
+                      <li class="text-default">
+                        <strong>Condiciones higiénicas:</strong> Es vital mantener una higiene estricta para prevenir
+                        infecciones.
+                      </li>
+                    </ul>
+                    <strong>Ventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Flexibilidad y autonomía:</strong> Permite adaptar el tratamiento al estilo de vida del
+                        paciente.
+                      </li>
+                      <li class="text-default">
+                        <strong>Realización en el hogar:</strong> Evita desplazamientos frecuentes a un centro de diálisis.
+                      </li>
+                      <li class="text-default">
+                        <strong>Mejor conservación de la función renal residual:</strong> Puede preservar la función renal
+                        restante por más tiempo.
+                      </li>
+                      <li class="text-default">
+                        <strong>Menos restricciones dietéticas:</strong> Generalmente permite una dieta más flexible.
+                      </li>
+                      <li class="text-default">
+                        <strong>Menor impacto en la presión arterial:</strong> Los cambios son más graduales, reduciendo
+                        el riesgo de hipotensión.
+                      </li>
+                    </ul>
+                    <strong>Desventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Riesgo de infecciones (peritonitis):</strong> La infección del peritoneo es una complicación
+                        grave.
+                      </li>
+                      <li class="text-default">
+                        <strong>Requiere responsabilidad y autocuidado:</strong> El paciente debe ser diligente en seguir
+                        las instrucciones.
+                      </li>
+                      <li class="text-default">
+                        <strong>Necesidad de espacio y condiciones higiénicas en casa:</strong> Puede ser un desafío para
+                        algunos hogares.
+                      </li>
+                      <li class="text-default">
+                        <strong>Mayor pérdida de proteínas:</strong> Puede llevar a problemas nutricionales si no se
+                        controla adecuadamente.
+                      </li>
+                      <li class="text-default">
+                        <strong>Capacidad limitada del peritoneo:</strong> No todos los pacientes tienen una membrana
+                        peritoneal adecuada para este tratamiento.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="treatments-transplant" role="tabpanel" aria-labelledby="treatments-transplant-tab">
+                    <p class="text-center mb-4">
+                      <img alt="Diálisis peritoneal" src="dist/img/transplante.jpg" style="width:50%">
+                    </p>
+                    <strong>¿En qué consiste y cómo funciona?</strong><br>
+                    El trasplante renal es una cirugía que coloca un riñón sano de un donante en el cuerpo del paciente. El riñón trasplantado asume las
+                    funciones que los riñones dañados ya no pueden realizar, como filtrar los desechos y regular el equilibrio de líquidos y electrolitos. Un
+                    trasplante exitoso puede permitir al paciente llevar una vida más normal y activa.<br><br>
+                    <strong>¿Dónde se realiza?</strong><br>
+                    Se realiza en hospitales especializados con equipos médicos y quirúrgicos altamente capacitados. Después de la cirugía, el paciente requiere
+                    hospitalización y seguimiento médico intensivo para asegurarse de que el nuevo riñón funcione correctamente y para
+                    ajustar los medicamentos inmunosupresores que evitan el rechazo del nuevo órgano trasplantado.<br><br>
+                    <strong>Tipos de donantes</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Donante vivo:</strong> Puede ser un familiar o alguien compatible, lo que suele ofrecer mejores resultados a largo plazo.
+                      </li>
+                      <li class="text-default">
+                        <strong>Donante fallecido:</strong> Riñones obtenidos de personas que han fallecido y han donado sus órganos.
+                      </li>
+                    </ul>
+                    <strong>Proceso previo al trasplante</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Evaluación exhaustiva:</strong> Para determinar si el paciente es apto para la cirugía y el tratamiento posterior.
+                      </li>
+                      <li class="text-default">
+                        <strong>Búsqueda de donante compatible:</strong> Puede implicar tiempo en una lista de espera.
+                      </li>
+                      <li class="text-default">
+                        <strong>Preparación psicológica y emocional:</strong> Asegurar que el paciente y su familia entiendan el proceso y los compromisos a largo plazo.
+                      </li>
+                    </ul>
+                    <strong>Ventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Mejor calidad de vida:</strong> Mayor energía y bienestar general.
+                      </li>
+                      <li class="text-default">
+                        <strong>Mayor esperanza de vida:</strong> Comparado con pacientes en diálisis a largo plazo.
+                      </li>
+                      <li class="text-default">
+                        <strong>Libertad de la diálisis:</strong> Elimina la necesidad de sesiones regulares de diálisis.
+                      </li>
+                      <li class="text-default">
+                        <strong>Menos restricciones dietéticas:</strong> Mayor flexibilidad en la alimentación.
+                      </li>
+                      <li class="text-default">
+                        <strong>Retorno a actividades normales:</strong> Posibilidad de trabajar y realizar actividades físicas sin limitaciones significativas.
+                      </li>
+                    </ul>
+                    <strong>Desventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Medicamentos de por vida:</strong> Necesidad de tomar inmunosupresores (anti rechazo) que pueden tener efectos secundarios.
+                      </li>
+                      <li class="text-default">
+                        <strong>Riesgo de rechazo:</strong> El sistema inmunológico puede rechazar el nuevo órgano.
+                      </li>
+                      <li class="text-default">
+                        <strong>Complicaciones quirúrgicas:</strong> Riesgos asociados con cualquier cirugía mayor.
+                      </li>
+                      <li class="text-default">
+                        <strong>Tiempo de espera:</strong> Puede ser prolongado y estresante.
+                      </li>
+                      <li class="text-default">
+                        <strong>No garantiza una solución permanente:</strong> El riñón trasplantado puede fallar eventualmente.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="treatments-conservative" role="tabpanel" aria-labelledby="treatments-conservative-tab">
+                    <p class="text-center mb-4">
+                      <img alt="Diálisis peritoneal" src="dist/img/tratamiento.jpg" style="width:50%">
+                    </p>
+                    <strong>¿En qué consiste y cómo funciona?</strong><br>
+                    El tratamiento conservador es una opción enfocada en el cuidado integral del paciente sin recurrir a diálisis o trasplante. Está especialmente
+                    indicado para personas de edad avanzada o con múltiples enfermedades crónicas e invalidantes donde los tratamientos con diálisis pueden no
+                    ofrecer beneficios significativos. Se centra en mejorar la calidad de vida, controlar síntomas y proporcionar apoyo emocional y social.<br><br>
+                    <strong>¿Dónde se realiza?</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Lugar:</strong> Puede llevarse a cabo en el hogar, hospitales, centros médicos para adultos mayores con unidades de apoyo.
+                      </li>
+                      <li class="text-default">
+                        <strong>Equipo multidisciplinario:</strong> Incluye nefrólogos, enfermeras, nutricionistas, psicólogos, kinesiólogos y trabajadores sociales.
+                      </li>
+                      <li class="text-default">
+                        <strong>Componentes del tratamiento:</strong>
+                        <ul>
+                          <li class="text-default">Manejo de síntomas: Control de la presión arterial, anemia, edemas y
+                            desequilibrios electrolíticos.
+                          </li>
+                          <li class="text-default">Apoyo nutricional: Dietas adaptadas para reducir la carga de desechos
+                            metabólicos.
+                          </li>
+                          <li class="text-default">Soporte emocional y psicológico: Para el paciente y su familia.
+                          </li>
+                          <li class="text-default">Cuidados paliativos: Enfocados en aliviar el sufrimiento y mejorar el bienestar general.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <strong>Candidatos para el tratamiento conservador</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Pacientes con enfermedades crónicas avanzadas:</strong> Como insuficiencia cardíaca severa o demencia avanzada.
+                      </li>
+                      <li class="text-default">
+                        <strong>Personas que deciden no someterse a diálisis o trasplante:</strong> Por razones personales o médicas.
+                      </li>
+                      <li class="text-default">
+                        <strong>Pacientes con contraindicación para diálisis:</strong> Debido a condiciones médicas que aumentan los riesgos.
+                      </li>
+                    </ul>
+                    <strong>Ventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>Enfoque en la calidad de vida:</strong> Prioriza el bienestar y comodidad del paciente.
+                      </li>
+                      <li class="text-default">
+                        <strong>Menos procedimientos invasivos:</strong> Evita las molestias y riesgos de la diálisis y cirugías.
+                      </li>
+                      <li class="text-default">
+                        <strong>Atención personalizada:</strong> Adaptada a las necesidades y deseos del paciente.
+                      </li>
+                      <li class="text-default">
+                        <strong>Mayor comodidad en el hogar:</strong> Reduce la necesidad de desplazamientos y hospitalizaciones.
+                      </li>
+                      <li class="text-default">
+                        <strong>Respeto a la autonomía del paciente:</strong> Valora las decisiones personales sobre su cuidado.
+                      </li>
+                    </ul>
+                    <strong>Desventajas</strong><br>
+                    <ul>
+                      <li class="text-default">
+                        <strong>No reemplaza la función renal perdida:</strong> La enfermedad continúa avanzando.
+                      </li>
+                      <li class="text-default">
+                        <strong>Expectativa de vida limitada:</strong> Puede acortar la vida en comparación con tratamientos como la diálisis.
+                      </li>
+                      <li class="text-default">
+                        <strong>Necesidad de apoyo constante:</strong> Requiere la participación activa de familiares o cuidadores.
+                      </li>
+                      <li class="text-default">
+                        <strong>Manejo complejo de síntomas:</strong> Puede ser difícil controlar todos los síntomas asociados.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h5 class="mt-4">Recomendaciones en la toma de decisión entre las opciones de tratamiento en ERC Avanzada</h5>
+            <p>Es esencial discutir con el equipo médico para decidir la opción más adecuada según las
+              necesidades, condiciones de salud y preferencias personales. La elección del tratamiento
+              debe ser una decisión compartida que considere tanto los aspectos médicos como los
+              valores y deseos de la persona. Una buena comunicación y confianza entre el paciente, su
+              familia y los profesionales de la salud son fundamentales para lograr el mejor resultado
+              posible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
         <div class="col-10 offset-md-1 text-center">
-          ¿Quieres más información? Revisa <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro recetario saludable aquí</a>.
+          ¿Quieres más información? Revisa
+          <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro recetario saludable aquí</a>.
         </div>
       </div>
 
@@ -286,7 +654,7 @@ extract($_GET);
               [2] Levey AS, Bosch JP, Lewis JB, Greene T, Rogers N, Roth D. "A more accurate method to estimate glomerular filtration rate from serum creatinine: a new prediction equation". Modification of Diet in Renal Disease Study Group. Ann Intern Med. 1999;130(6):461-70.
             </span>
           </a>
-          <a class="btn btn-light btn-biblio" href="https://kidneyfailurerisk.com/CKD_handbook__Jan_31st_2019.pdf" target="_blank">
+          <a class="btn btn-light btn-biblio" id="kidney_link" href="https://kidneyfailurerisk.com/CKD_handbook__Jan_31st_2019.pdf" target="_blank">
             <span class="btn-icon">
               <i class="fad fa-books"></i>
             </span>
@@ -307,7 +675,7 @@ extract($_GET);
               <i class="fad fa-books"></i>
             </span>
             <span class="btn-text">
-              [5] https://kidneyfailurerisk.com/interpretation
+              [5] Grams ME, Brunskill NJ, Ballew SH, et al. "The kidney failure risk equation: evaluation of novel input variables including eGFR estimated using the CKD-EPI 2021 equation in 59 cohorts". J Am Soc Nephrol. 2023;34:482–494.
             </span>
           </a>
         </div>

@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(this).val(val.replace(/[^\d.]+/g, ''))
   })
 
-  $('.text-ref').click(function () {
+  $('.wrapper').on('click', '.text-ref', function () {
     const id = $(this).attr('id').split('_').shift()
     let count = 0
     $('html, body').animate({scrollTop: $(document).height()}, 1000);
