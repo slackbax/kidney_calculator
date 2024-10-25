@@ -49,8 +49,8 @@ extract($_GET);
           ¿Es posible estimar el riesgo de progresar la enfermedad e ingresar a diálisis?
         </p>
         <p>
-          Si además cuenta además con el examen de orina Razón Albuminuria/Creatininuria (RAC o microalbuminuria), se puede adicionalmente estimar el riesgo de que una
-          persona con enfermedad renal crónica (ERC) necesite diálisis o trasplante renal en los próximos 2 o 5 años ( Ecuación de Riesgo de Insuficiencia Renal. KFRE).
+          Si cuenta además con el examen de orina Razón Albuminuria/Creatininuria (RAC o microalbuminuria), se puede adicionalmente estimar el riesgo de que una
+          persona con enfermedad renal crónica (ERC) necesite diálisis o trasplante renal en los próximos 2 o 5 años (Ecuación de Riesgo de Insuficiencia Renal, KFRE).
           Si desea conocer la función estimada de sus riñones y/o el riesgo de progresión KFRE, ingrese los datos en el siguiente formulario y se recomienda siempre
           informar el resultado a su médico tratante para decidir el plan de tratamiento.
         </p>
