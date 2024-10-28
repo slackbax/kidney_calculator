@@ -630,8 +630,8 @@ extract($_GET);
 
       <div class="row mt-4">
         <div class="col-10 offset-md-1 text-center">
-          ¿Quieres más información? Revisa
-          <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro recetario saludable aquí</a>.
+          ¿Quieres más información sobre tu dieta? Revisa
+          <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro <i class="fa fa-salad"></i> recetario saludable aquí</a>.
         </div>
       </div>
 
