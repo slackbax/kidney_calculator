@@ -40,17 +40,29 @@ extract($_GET);
   <div class="wrapper">
     <div class="row">
       <div class="alert mt-4">
-        <h5 class="font-weight-bold mb-3">¿Qué necesitas para calcular tu función renal?</h5>
+        <h5 class="font-weight-bold mb-3">¿Qué necesitas para estimar tu función renal?</h5>
         <p>
-          La función renal se puede estimar con ecuaciones matemáticas (MDRD-4 y CKD- EPI), que utilizan datos como edad, sexo y el nivel de creatinina en sangre para
+          La función renal se puede estimar con ecuaciones matemáticas (MDRD-4 y CKD-EPI), que utilizan datos como edad, sexo y el nivel de creatinina en sangre para
           aproximar la real capacidad de filtrar los desechos de la sangre.
         </p>
-        <p class="text-bold">
-          ¿Es posible estimar el riesgo de progresar la enfermedad e ingresar a diálisis?
+
+        <h5 class="font-weight-bold mb-3">¿Es posible estimar el riesgo de progresar la enfermedad e ingresar a diálisis?</h5>
+        <p>La Ecuación de Riesgo de Insuficiencia Renal (KFRE) es una herramienta que ayuda a
+          predecir el riesgo de que una persona con enfermedad renal crónica (ERC) pudiera
+          necesitar diálisis o trasplante renal en los próximos 2 o 5 años.
+          Para calcular el KFRE, se necesita la siguiente información:</p>
+        <ul>
+          <li class="text-default">Edad y sexo de la persona.</li>
+          <li class="text-default">Exámenes de laboratorio: la Velocidad de Filtración Glomerular estimada (VFGe) y
+            la Razón Albuminuria/Creatininuria.
+          </li>
+        </ul>
+        <p>Estos datos se pueden obtener en cualquier consultorio de la red de salud.
+          El KFRE permite a los médicos y al paciente junto a su familia tomar decisiones
+          importantes sobre el tratamiento de la enfermedad renal.
         </p>
+
         <p>
-          Si cuenta además con el examen de orina Razón Albuminuria/Creatininuria (RAC o microalbuminuria), se puede adicionalmente estimar el riesgo de que una
-          persona con enfermedad renal crónica (ERC) necesite diálisis o trasplante renal en los próximos 2 o 5 años (Ecuación de Riesgo de Insuficiencia Renal, KFRE).
           Si desea conocer la función estimada de sus riñones y/o el riesgo de progresión KFRE, ingrese los datos en el siguiente formulario y se recomienda siempre
           informar el resultado a su médico tratante para decidir el plan de tratamiento.
         </p>
@@ -157,14 +169,14 @@ extract($_GET);
               <h1><span id="efg_ckd" class="text-info mr-2"></span><sup style="font-size: 16px">mL/min/1.73 m2</sup>
               </h1>
               <h4 class="mb-0" id="efg_stage_ckd"></h4>
-              <small class="text-info has-tooltip text-ref" id="ckd_ref">Creatinina estandarizada CKD-EPI 2009 [1]</small>
+              <small class="text-info has-tooltip text-ref" id="kidney_ref">Creatinina estandarizada <strong>CKD-EPI 2009</strong> [1][2][3]</small>
             </div>
 
             <div class="col-12 text-center text-bold mt-5">
               <h1><span id="efg_mdr" class="text-info mr-2"></span><sup style="font-size: 16px">mL/min/1.73 m2</sup>
               </h1>
               <h4 class="mb-0" id="efg_stage_mdr"></h4>
-              <small class="text-info has-tooltip text-ref" id="mdr_ref">Creatinina no estandarizada MDRD-4 IDMS [2]</small>
+              <small class="text-info has-tooltip text-ref" id="kidney_ref">Creatinina no estandarizada <strong>MDRD-4 IDMS</strong> [1][2][3]</small>
             </div>
           </div>
         </div>
@@ -182,7 +194,7 @@ extract($_GET);
       <div class="row">
         <div class="col-md-6 offset-md-3 mt-3">
           <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseRecommendations" aria-expanded="false">
-            <i class="fa fa-plus mr-2"></i>Ver recomendaciones
+            <i class="fa fa-plus mr-2"></i>Ver recomendaciones de salud
           </button>
         </div>
         <div class="col-md-10 offset-md-1 mt-3">
@@ -194,28 +206,6 @@ extract($_GET);
 
       <div id="main_res">
         <div class="row mt-5">
-          <div class="col-10 offset-md-1 text-center">
-            <h4>KFRE: Ecuación de predicción de Riesgo Progresión a insuficiencia renal</h4>
-          </div>
-          <div class="col-10 offset-md-1">
-            <p>La Ecuación de Riesgo de Insuficiencia Renal (KFRE) es una herramienta que ayuda a
-              predecir el riesgo de que una persona con enfermedad renal crónica (ERC) pudiera
-              necesitar diálisis o trasplante renal en los próximos 2 o 5 años.
-              Para calcular el KFRE, se necesita la siguiente información:</p>
-            <ul>
-              <li class="text-default">Edad y sexo de la persona.</li>
-              <li class="text-default">Exámenes de laboratorio: la Velocidad de Filtración Glomerular estimada (VFGe) y
-                la Razón Albuminuria/Creatininuria.
-              </li>
-            </ul>
-            <p>Estos datos se pueden obtener en cualquier consultorio de la red de salud.
-              El KFRE permite a los médicos y al paciente junto a su familia tomar decisiones
-              importantes sobre el tratamiento de la enfermedad renal.
-            </p>
-          </div>
-        </div>
-
-        <div class="row mt-4">
           <div class="col-12 text-center">
             <h5 class="text-bold">Riesgo de progresión a insuficiencia renal que requiera diálisis o transplante</h5>
           </div>
@@ -245,7 +235,7 @@ extract($_GET);
           </div>
 
           <div class="col-12 text-center">
-            <small class="text-info has-tooltip text-ref" id="kfre_ref">KFRE (Kidney failure risk ecuation) [4]</small>
+            <small class="text-info has-tooltip text-ref" id="kidney_ref">KFRE (Kidney failure risk ecuation) [1][2][3]</small>
           </div>
         </div>
 
@@ -264,7 +254,7 @@ extract($_GET);
             </ul>
           </div>
           <div class="col-12 text-center">
-            <small class="text-info has-tooltip text-ref" id="ranks_ref">Rangos de referencia nefrológica [5]</small>
+            <small class="text-info has-tooltip text-ref" id="kidney_ref">Rangos de referencia nefrológica [1][2][3]</small>
           </div>
           <div class="col-10 offset-md-1 mt-3">
             <p class="text-bold">Importante</p>
@@ -295,28 +285,28 @@ extract($_GET);
       <div class="row">
         <div class="col-md-6 offset-md-3 mt-3">
           <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTreatments" aria-expanded="false">
-            <i class="fa fa-plus mr-2"></i>Ver opciones de tratamiento
+            <i class="fa fa-plus mr-2"></i>Ver opciones de tratamiento para ERC
           </button>
         </div>
         <div class="col-md-10 offset-md-1 mt-4">
           <div id="collapseTreatments" class="collapse">
             <h5>Opciones de tratamiento en la Enfermedad Renal Avanzada</h5>
             <p>Cuando los riñones ya no funcionan adecuadamente, es necesario conocer todas las
-              opciones de tratamiento disponibles.</p>
+              opciones de tratamiento disponibles. A continuación, se describen las cuatro opciones de tratamiento disponibles para pacientes con ERC etapa 5.</p>
             <div class="card card-outline card-tabs">
               <div class="card-header p-0 pt-1 border-bottom-0">
                 <ul class="nav nav-tabs" id="treatments-tab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active" id="treatments-hemo-tab" data-toggle="pill" href="#treatments-hemo" role="tab" aria-controls="treatments-hemo" aria-selected="true">Hemodiálisis</a>
+                    <a class="nav-link active text-bold" id="treatments-hemo-tab" data-toggle="pill" href="#treatments-hemo" role="tab" aria-controls="treatments-hemo" aria-selected="true">HEMODIALISIS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="treatments-dialisis-tab" data-toggle="pill" href="#treatments-dialisis" role="tab" aria-controls="treatments-dialisis" aria-selected="false">Diálisis Peritoneal</a>
+                    <a class="nav-link text-bold" id="treatments-dialisis-tab" data-toggle="pill" href="#treatments-dialisis" role="tab" aria-controls="treatments-dialisis" aria-selected="false">DIALISIS PERITONEAL</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="treatments-transplant-tab" data-toggle="pill" href="#treatments-transplant" role="tab" aria-controls="treatments-transplant" aria-selected="false">Trasplante Renal</a>
+                    <a class="nav-link text-bold" id="treatments-transplant-tab" data-toggle="pill" href="#treatments-transplant" role="tab" aria-controls="treatments-transplant" aria-selected="false">TRANSPLANTE RENAL</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="treatments-conservative-tab" data-toggle="pill" href="#treatments-conservative" role="tab" aria-controls="treatments-conservative" aria-selected="false">Tratamiento Conservador</a>
+                    <a class="nav-link text-bold" id="treatments-conservative-tab" data-toggle="pill" href="#treatments-conservative" role="tab" aria-controls="treatments-conservative" aria-selected="false">TRATAMIENTO CONSERVADOR</a>
                   </li>
                 </ul>
               </div>
@@ -631,35 +621,20 @@ extract($_GET);
       <div class="row mt-4">
         <div class="col-10 offset-md-1 text-center">
           ¿Quieres más información sobre tu dieta? Revisa
-          <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro <i class="fa fa-salad"></i> recetario saludable aquí</a>.
+          <a href="https://issuu.com/crtbiobio/docs/recetario_crt" target="_blank">nuestro
+            <i class="fa fa-salad"></i> recetario saludable aquí</a>.
         </div>
       </div>
 
       <div class="row mt-5">
         <div class="col-10 offset-1">
           <h6>Referencias bibliográficas</h6>
-          <a class="btn btn-light btn-biblio" id="ckd_link" href="https://pubmed.ncbi.nlm.nih.gov/19414839/" target="_blank">
-            <span class="btn-icon">
-              <i class="fad fa-books"></i>
-            </span>
-            <span class="btn-text">
-              [1] Levey AS, Stevens LA, Schmid CH, et al. "A new equation to estimate glomerular filtration rate [published correction appears in Ann Intern Med. 2011 Sep 20;155(6):408]". Ann Intern Med. 2009;150(9):604-612. doi:10.7326/0003-4819-150-9-200905050-00006.
-            </span>
-          </a>
-          <a class="btn btn-light btn-biblio" id="mdr_link" href="https://pubmed.ncbi.nlm.nih.gov/10075613/" target="_blank">
-            <span class="btn-icon">
-              <i class="fad fa-books"></i>
-            </span>
-            <span class="btn-text">
-              [2] Levey AS, Bosch JP, Lewis JB, Greene T, Rogers N, Roth D. "A more accurate method to estimate glomerular filtration rate from serum creatinine: a new prediction equation". Modification of Diet in Renal Disease Study Group. Ann Intern Med. 1999;130(6):461-70.
-            </span>
-          </a>
           <a class="btn btn-light btn-biblio" id="kidney_link" href="https://kidneyfailurerisk.com/CKD_handbook__Jan_31st_2019.pdf" target="_blank">
             <span class="btn-icon">
               <i class="fad fa-books"></i>
             </span>
             <span class="btn-text">
-              [3] "Your Kidneys, Your Health: A guidebook designed for individuals diagnosed with late stage chronic kidney disease". https://kidneyfailurerisk.com
+              [1] "Your Kidneys, Your Health: A guidebook designed for individuals diagnosed with late stage chronic kidney disease". https://kidneyfailurerisk.com
             </span>
           </a>
           <a class="btn btn-light btn-biblio" id="kfre_link" href="https://doi.org/10.1016/j.kint.2023.10.018" target="_blank">
@@ -667,7 +642,7 @@ extract($_GET);
               <i class="fad fa-books"></i>
             </span>
             <span class="btn-text">
-              [4] "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group (2024)". KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney international, 105(4S), S117–S314.
+              [2] "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group (2024)". KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney international, 105(4S), S117–S314.
             </span>
           </a>
           <a class="btn btn-light btn-biblio" id="ranks_link" href="https://kidneyfailurerisk.com/interpretation" target="_blank">
@@ -675,7 +650,7 @@ extract($_GET);
               <i class="fad fa-books"></i>
             </span>
             <span class="btn-text">
-              [5] Grams ME, Brunskill NJ, Ballew SH, et al. "The kidney failure risk equation: evaluation of novel input variables including eGFR estimated using the CKD-EPI 2021 equation in 59 cohorts". J Am Soc Nephrol. 2023;34:482–494.
+              [3] Grams ME, Brunskill NJ, Ballew SH, et al. "The kidney failure risk equation: evaluation of novel input variables including eGFR estimated using the CKD-EPI 2021 equation in 59 cohorts". J Am Soc Nephrol. 2023;34:482–494.
             </span>
           </a>
         </div>
