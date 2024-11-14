@@ -61,13 +61,18 @@ $(document).ready(function () {
           $('#result_text h5').html(r.text.title)
           $('#result_text span').html(r.text.desc)
           $('#collapseRecommendations .card-body').html(r.text.rec)
+          if (parseFloat(r.ckd) <= 15) {
+            $('#trat_opt').css('display', 'none')
+          } else {
+            $('#trat_opt').css('display', 'none')
+          }
           if (parseFloat(r.ckd) < 10) {
             $('#main_res').css('display', 'none')
-            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>menor a 10 mL / min / 1.73 m<sup>2</sup></strong> (etapas 3 a 5), por lo que no han sido calculados.')
+            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [2]</span> no han sido validados para un eGFR <strong>menor a 10 mL / min / 1.73 m<sup>2</sup></strong> (etapas 1 a 2), por lo que no han sido calculados.')
             $('#sec_res').css('display', 'block')
           } else if (parseFloat(r.ckd) > 60) {
             $('#main_res').css('display', 'none')
-            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no han sido validados para un eGFR <strong>mayor a 60 mL / min / 1.73 m<sup>2</sup></strong> (etapas 3 a 5), por lo que no han sido calculados.')
+            $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [2]</span> no han sido validados para un eGFR <strong>mayor a 60 mL / min / 1.73 m<sup>2</sup></strong> (etapas 1 a 2), por lo que no han sido calculados.')
             $('#sec_res').css('display', 'block')
           } else {
             if (r.twoyr !== '') {
@@ -77,7 +82,7 @@ $(document).ready(function () {
               $('#kfre5').html(r.fiveyr)
             } else {
               $('#main_res').css('display', 'none')
-              $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [4]</span> no pueden ser calculados sin haber ingresado el <strong>Ratio Albúmina/Creatinina en Orina</strong>.')
+              $('#sec_res .text').html('Los resultados de <span class="has-tooltip text-ref" id="kfre_ref">KFRE [2]</span> no pueden ser calculados sin haber ingresado el <strong>Ratio Albúmina/Creatinina en Orina</strong>.')
               $('#sec_res').css('display', 'block')
             }
           }

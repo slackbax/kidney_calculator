@@ -30,7 +30,7 @@ function get_text($i): array
       'title' => 'Etapa 1',
       'desc' => 'La mayoría de las personas con ERC en etapas 1 y 2 no presenta síntomas y puede vivir con normalidad. Sin embargo, la enfermedad puede 
       retrasar la evolución de la persona, por lo que es importante avanzar sin que lo notes, por lo que es importante realizar chequeos médicos regulares. <small class="has-tooltip text-ref" id="kidney_ref">[1][2][3]</small><br><br>
-      <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
+      <i>A continuación, te entregamos algunas recomendaciones generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
       <li><i class="fad fa-user-md mr-2"></i><strong>Consulta médica periódica.</strong> Lo que permitirá realizar eventuales ajustes de forma oportuna en el tratamiento.</li>
@@ -49,7 +49,9 @@ function get_text($i): array
     return [
       'title' => 'Etapa 2',
       'desc' => 'La mayoría de las personas con ERC en etapas 1 y 2 no presenta síntomas y puede vivir con normalidad. Sin embargo, la enfermedad puede 
-      avanzar sin que lo notes, por lo que es importante realizar chequeos médicos regulares. <small class="has-tooltip text-ref" id="kidney_ref">[1][2][3]</small>',
+      avanzar sin que lo notes, por lo que es importante realizar chequeos médicos regulares. <small class="has-tooltip text-ref" id="kidney_ref">[1][2][3]</small><br><br>
+      <i>A continuación, te entregamos algunas recomendaciones generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
+      que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
       <li><i class="fad fa-user-md mr-2"></i><strong>Consulta médica periódica.</strong> Lo que permitirá realizar eventuales ajustes de forma oportuna en el tratamiento.</li>
       <li><i class="fad fa-capsules mr-2"></i><strong>Medicamentos.</strong> Consulta a tu médico antes de usar cualquier medicamento nuevo, suplemento, vitamina o productos naturales.</li> 
@@ -70,7 +72,7 @@ function get_text($i): array
       la función renal. Los más frecuentes son el aumento de la presión arterial, edema (hinchazón) en las piernas, dolores musculares y articulares, falta
       de ánimo, disminución del apetito y cambios del gusto, náuseas y vómitos, y aumento de la cantidad de orina (especialmente nocturna).<br>
       En estas etapas, es crucial realizar controles médicos y exámenes regulares para retrasar el avance de la enfermedad y detectar complicaciones a tiempo. <small class="has-tooltip text-ref" id="kidney_ref">[1][2][3]</small><br><br>
-      <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
+      <i>A continuación, te entregamos algunas recomendaciones generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
       <li><i class="fad fa-user-md mr-2"></i><strong>Consulta médica periódica.</strong> Visita regularmente a tu médico nefrólogo para chequear la evolución y de requerirse ajustar el tratamiento. </li>
@@ -100,7 +102,7 @@ function get_text($i): array
       la función renal. Los más frecuentes son el aumento de la presión arterial, edema (hinchazón) en las piernas, dolores musculares y articulares, falta
       de ánimo, disminución del apetito y cambios del gusto, náuseas y vómitos, y aumento de la cantidad de orina (especialmente nocturna).<br>
       En estas etapas, es crucial realizar controles médicos y exámenes regulares para retrasar el avance de la enfermedad y detectar complicaciones a tiempo. <small class="has-tooltip text-ref" id="kidney_ref">[1][2][3]</small><br><br>
-      <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
+      <i>A continuación, te entregamos algunas recomendaciones generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
       <li><i class="fad fa-user-md mr-2"></i><strong>Consulta médica periódica.</strong> Visita regularmente a tu médico nefrólogo para chequear la evolución y de requerirse ajustar el tratamiento. </li>
@@ -137,7 +139,7 @@ function get_text($i): array
       La diálisis (hemo o peritoneodiálisis) y el trasplante renal son prestaciones de la patología GES (FONASA) Insuficiencia Renal Crónica Terminal, 
       las cuales son de acceso universal para todos los pacientes en nuestro país, independiente de la edad y condición socioeconómica. Además son sujetos 
       de garantía de protección financiera. <small class="has-tooltip text-ref" id="kidney_ref">[1][2][3]</small><br><br>
-      <i>Estas recomendaciones son generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
+      <i>A continuación, te entregamos algunas recomendaciones generales para ayudarte a llevar una vida más saludable y a proteger la función de tus riñones. Es siempre necesario 
       que las converses con tu equipo médico tratante cuando asistas a tus controles habituales.</i>',
       'rec' => '<ol>
       <li><i class="fad fa-user-md mr-2"></i><strong>Consulta médica periódica.</strong> Visita regularmente a tu médico nefrólogo para chequear la evolución y de requerirse ajustar el tratamiento. </li>

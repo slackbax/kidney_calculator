@@ -282,10 +282,10 @@ extract($_GET);
         </div>
       </div>
 
-      <div class="row">
+      <div id="trat_opt" class="row">
         <div class="col-md-6 offset-md-3 mt-3">
           <button class="btn btn-block btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTreatments" aria-expanded="false">
-            <i class="fa fa-plus mr-2"></i>Ver opciones de tratamiento para ERC
+            <i class="fa fa-plus mr-2"></i>Ver opciones de tratamiento para ERC Avanzada
           </button>
         </div>
         <div class="col-md-10 offset-md-1 mt-4">
