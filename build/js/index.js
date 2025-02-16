@@ -1,5 +1,6 @@
 $(document).ready(function () {
   const $age = $('#age'), $sex = $('#sex'), $creatin = $('#creatin'), $meas = $('#meas'), $etnia = $('#afro'),
+    $country = $('#country'), $region = $('#region'), $creatin_album = $('#creat_album'), $hiper = $('#hiper'), $diabetes = $('#diabetes'),
     $form = $('#form-kidney'), $res_div = $('#div_results')
 
   $('.number').keyup(function () {
@@ -29,8 +30,8 @@ $(document).ready(function () {
       type: 'post',
       dataType: 'json',
       beforeSubmit: function () {
-        const field = [$age, $sex, $creatin, $meas, $etnia],
-          msg = ['Edad', 'Sexo', 'Creatinina', 'Medida de la creatinina', 'Ascendencia']
+        const field = [$age, $sex, $creatin, $meas, $etnia, $country, $region, $creatin_album, $hiper, $diabetes],
+          msg = ['Edad', 'Sexo', 'Creatinina', 'Medida de la creatinina', 'Ascendencia', 'País', 'Región', 'Albúmina/Creatinina', 'Hipertensión', 'Diabetes']
         let error = ''
 
         field.forEach(function (item) {
@@ -53,6 +54,16 @@ $(document).ready(function () {
       },
       success: function (r) {
         if (r.status) {
+          $age.val('')
+          $sex.val('')
+          $etnia.val('')
+          $country.val('')
+          $region.val('')
+          $creatin.val('')
+          $meas.val('')
+          $creatin_album.val('')
+          $hiper.val('')
+          $diabetes.val('')
           $('#img_result').attr('src', 'dist/img/' + r.image);
           $('#efg_mdr').html(r.mdr)
           $('#efg_stage_mdr').html('Etapa ' + r.stage_mdr)

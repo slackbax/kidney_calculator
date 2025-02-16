@@ -2,7 +2,12 @@
 require 'src/settings.php';
 require 'src/constants.php';
 require 'src/functions.php';
+require 'class/Connect.php';
+require 'class/Country.php';
+require 'class/Region.php';
 extract($_GET);
+$c = new Country();
+$r = new Region();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,6 +99,43 @@ extract($_GET);
               </div>
 
               <div class="form-group col-md-4">
+                <label for="afro"><i class="fad fa-user-friends mr-2"></i><span class="has-tooltip" data-toggle="tooltip" data-placement="right" data-title="Persona que es hijo o nieto, o de parentesco africano que nace fuera del continente africano.">¿Es afrodescendiente?</span></label>
+                <div class="input-group">
+                  <select class="form-control" name="afro" id="afro">
+                    <option value="">Seleccione opción</option>
+                    <option value="1">Sí</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="country"><i class="fad fa-flag mr-2"></i>País de residencia</label>
+                <div class="input-group">
+                  <select class="form-control" name="country" id="country">
+                    <option value="">Seleccione opción</option>
+                    <?php $cou = $c->select() ?>
+                    <?php foreach ($cou as $co) {
+                      echo '<option value="' . $co->id . '">' . $co->text . '</option>';
+                    } ?>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="region"><i class="fad fa-flag mr-2"></i>Región de residencia</label>
+                <div class="input-group">
+                  <select class="form-control" name="region" id="region">
+                    <option value="">Seleccione opción</option>
+                    <?php $reg = $r->select() ?>
+                    <?php foreach ($reg as $re) {
+                      echo '<option value="' . $re->id . '">' . $re->text . '</option>';
+                    } ?>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4">
                 <label for="creatin"><i class="fad fa-kidneys mr-2"></i><span class="has-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Dependiendo del laboratorio que hace el análisis, puede ser medida en Miligramos por Decilitro (mg/dL) o Micromoles por Litro (μmol/l)">Creatinina</span></label>
                 <div class="input-group">
                   <input type="text" name="creatin" id="creatin" class="form-control text-right number" autocomplete="off">
@@ -107,24 +149,35 @@ extract($_GET);
                 </div>
               </div>
 
-              <div class="form-group col-md-4 offset-md-2">
-                <label for="afro"><i class="fad fa-user-friends mr-2"></i><span class="has-tooltip" data-toggle="tooltip" data-placement="right" data-title="Persona que es hijo o nieto, o de parentesco africano que nace fuera del continente africano.">¿Es afrodescendiente?</span></label>
-                <div class="input-group">
-                  <select class="form-control" name="afro" id="afro">
-                    <option value="">Selecciona opción</option>
-                    <option value="S">Sí</option>
-                    <option value="N">No</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="col-md-4">
+              <div class="form-group col-md-4">
                 <label for="creat_album"><i class="fad fa-glass-whiskey-rocks mr-2"></i><span class="has-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="Necesaria para el cálculo de KFRE">Ratio Albúmina/Creatinina en Orina</span></label>
                 <div class="input-group">
                   <input type="text" name="creat_album" id="creat_album" class="form-control text-right number" autocomplete="off">
                   <div class="input-group-append">
                     <span class="input-group-text">mg/g</span>
                   </div>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="hiper"><i class="fad fa-heart-rate mr-2"></i>¿Es hipertenso?</label>
+                <div class="input-group">
+                  <select class="form-control" name="hiper" id="hiper">
+                    <option value="">Seleccione opción</option>
+                    <option value="1">Sí</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="diabetes"><i class="fad fa-salad mr-2"></i>¿Sufre de Diabetes Mellitus?</label>
+                <div class="input-group">
+                  <select class="form-control" name="diabetes" id="diabetes">
+                    <option value="">Seleccione opción</option>
+                    <option value="1">Sí</option>
+                    <option value="0">No</option>
+                  </select>
                 </div>
               </div>
             </div>

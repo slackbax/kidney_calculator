@@ -1,5 +1,12 @@
 <?php
 
+$BASEDIR = explode('ajax', dirname(__FILE__))[0];
+
+require $BASEDIR . 'class/Connect.php';
+require $BASEDIR . 'class/Register.php';
+
+$db = new Connect();
+
 function evaluate($i): string
 {
   return match (true) {
@@ -194,7 +201,7 @@ if (extract($_POST)):
       $sx = 1;
       $mdr_s = 1;
 
-      $race_ind = ($afro == 'S') ? 163 : 141;
+      $race_ind = ($afro == '1') ? 163 : 141;
       $ind_a = 0.9;
       if ($creatin <= 0.9) {
         $ind_b = -0.411;
@@ -206,7 +213,7 @@ if (extract($_POST)):
       $sx = 0;
       $mdr_s = 0.742;
 
-      $race_ind = ($afro == 'S') ? 166 : 144;
+      $race_ind = ($afro == '1') ? 166 : 144;
       $ind_a = 0.7;
       if ($creatin <= 0.7) {
         $ind_b = -0.329;
@@ -218,7 +225,7 @@ if (extract($_POST)):
     $ckd_raw = $race_ind * pow(($creatin / $ind_a), $ind_b) * pow(0.993, $age);
     $ckd = round($ckd_raw, 1);
 
-    $rn = ($afro == 'S') ? 1.212 : 1;
+    $rn = ($afro == '1') ? 1.212 : 1;
     $mdr = round(175 * pow($creatin, -1.154) * pow($age, -0.203) * $mdr_s * $rn, 1);
 
     $tyr = '';
@@ -240,6 +247,12 @@ if (extract($_POST)):
       'twoyr' => $tyr,
       'fiveyr' => $fyr
     ];
+
+    $phase = explode('<span',evaluate($ckd))[0];
+    $reg = new Register();
+    $ins = $reg->set($country, $region, $age, $sex, $afro, $hiper, $diabetes, $creatin, $creat_album, $phase, $ckd, $mdr, $tyr/100, $fyr/100);
+    if (!$ins['status']) throw new Exception($ins['msg']);
+
     echo json_encode($response);
   } catch (Exception $e) {
     $response = ['status' => false, 'msg' => $e->getMessage()];

@@ -1,12 +1,27 @@
 <?php
 
-class ConnectMAIN
+$BASEDIR = explode('class', dirname(__FILE__))[0];
+
+if (file_exists($BASEDIR . 'src/settings.php')):
+  require_once $BASEDIR . 'src/settings.php';
+endif;
+
+class Connect
 {
   public ?mysqli $mysqli = null;
 
   public function __construct()
   {
-    $this->mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, MAIN_DATABASE);
+    $Host = DB_HOST;
+    $Db = DB_DATABASE;
+    $User = DB_USER;
+    $Pass = DB_PASSWORD;
+
+    $this->mysqli = new mysqli("p:$Host", "$User", "$Pass", "$Db");
+
+    if ($this->mysqli->connect_errno):
+      echo "Fallo al conectar a MySQL: (" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error;
+    endif;
     $this->mysqli->set_charset(DB_CHARSET);
   }
 
