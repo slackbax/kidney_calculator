@@ -112,7 +112,7 @@ $r = new Region();
               <div class="form-group col-md-4">
                 <label for="country"><i class="fad fa-flag mr-2"></i>País de residencia</label>
                 <div class="input-group">
-                  <select class="form-control" name="country" id="country">
+                  <select class="form-control" name="country" id="country" autocomplete="off">
                     <option value="">Seleccione opción</option>
                     <?php $cou = $c->select() ?>
                     <?php foreach ($cou as $co) {
@@ -125,7 +125,7 @@ $r = new Region();
               <div class="form-group col-md-4">
                 <label for="region"><i class="fad fa-flag mr-2"></i>Región de residencia</label>
                 <div class="input-group">
-                  <select class="form-control" name="region" id="region">
+                  <select class="form-control" name="region" id="region" autocomplete="off">
                     <option value="">Seleccione opción</option>
                     <?php $reg = $r->select() ?>
                     <?php foreach ($reg as $re) {
